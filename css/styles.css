@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #E1E5EE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Main container */
+#container {
+    min-height: auto; /* Allows dynamic height adjustment */
+    display: flex;
+    flex-direction: column; /* Stacks navigation and content properly */
+    align-items: center;
+}
+
+/* Wrapper for layout control */
+#wrapper {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Navigation Styling */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+    margin: 0; /* Remove any margins causing gaps */
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0;
+    width: 100%;
+    background-color: #2A324B; /* Ensures the navigation is attached to content */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav a {
+    background-color: #2A324B;
+    padding: 1rem 2rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0; /* Ensures seamless connection */
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #58699D;
+    color: #fff;
+}
+
+nav a.active-link {
+    background-color: white;
+    color: #2A324B;
+    border: 2px solid #2A324B;
+    border-bottom: none; /* Removes gap between active link and content */
+}
+
+/* Content Area Styling */
+#content-area {
+    background-color: white;
+    padding: 30px;
+    border-radius: 0 0 12px 12px;
+    color: #333;
+    min-width: 350px;
+    max-width: 870px;
+    min-height: 300px; /* Ensures enough space */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Remove any margin causing spacing */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#content-area h2 {
+    color: #2A324B;
+    margin-bottom: 10px;
+}
+
+#content-area ul {
+    margin-top: 10px;
+}
+
+#content-area ul li {
+    margin-bottom: 5px;
+}
+
+#content-area ul li a {
+    color: #58699D;
+    text-decoration: none;
+}
+
+#content-area ul li a:hover {
+    text-decoration: underline;
+}
+
+
