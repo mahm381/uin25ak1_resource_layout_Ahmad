@@ -81,6 +81,14 @@ nav a.active-link {
 }
 
 /* Content Area Styling */
+#container {
+    width: 100%; /* Ensures it spans the full width */
+    max-width: 1200px; /* Matches the navigation bar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #content-area {
     background-color: white;
     padding: 30px;
@@ -88,6 +96,7 @@ nav a.active-link {
     color: #333;
     min-width: 350px;
     max-width: 870px;
+    width:100%;
     min-height: 300px; /* Ensures enough space */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 0; /* Remove any margin causing spacing */
@@ -119,3 +128,43 @@ nav a.active-link {
 }
 
 
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+    /* Adjust container to fit small screens */
+    #container {
+        width: 95%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    /* Navigation Responsive */
+    nav ul {
+        flex-direction: column; /* Stack buttons */
+        align-items: center;
+        gap: 0.5rem; /* Reduce spacing */
+    }
+
+    nav a {
+        width: 100%; /* Full width buttons */
+        text-align: center;
+        padding: 0.8rem 1rem; /* Adjust padding */
+        font-size: 0.9rem; /* Slightly smaller text */
+    }
+
+    /* Content Area */
+    #content-area {
+        width: 95%;
+        max-width: 100%;
+        min-width: auto;
+        padding: 20px;
+        min-height: auto; /* Allows flexibility */
+    }
+
+    #content-area h2 {
+        font-size: 1.3rem; /* Adjust heading size */
+    }
+
+    #content-area ul li a {
+        font-size: 0.9rem; /* Reduce link size */
+    }
+}
